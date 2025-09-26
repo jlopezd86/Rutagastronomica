@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rutas del Mole | Gastronomía Mexicana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #5D2A1A;
+      --color-secondary: #8B4513;
+      --color-accent: #C19A6B;
+      --color-bg: #FDF9F3;
+      --color-text: #3E2723;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+    header {
+      background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://i.imgur.com/vGOfckp.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+
+    header p {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 300;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(93, 42, 26, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 2rem;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--color-accent);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+    }
+
+    .intro h2 {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .rutas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .ruta-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .ruta-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .ruta-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ruta-content {
+      padding: 1.5rem;
+    }
+
+    .ruta-content h3 {
+      color: var(--color-primary);
+      margin-bottom: 0.8rem;
+    }
+
+    footer {
+      background: var(--color-primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      header p { font-size: 1.1rem; }
+      nav a { margin-left: 1rem; font-size: 1rem; }
+      .ruta-card img { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" style="font-weight: bold; font-size: 1.3rem; color: white;">Rutas del Mole</a>
+    <div>
+      <a href="#rutas">Rutas</a>
+      <a href="#historia">Historia</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Rutas del Mole</h1>
+    <p>Descubre los secretos, sabores y tradiciones del mole mexicano a través de viajes inolvidables por el corazón de México.</p>
+  </header>
+
+  <div class="container">
+    <section class="intro" id="historia">
+      <h2>El Alma en Cada Salsa</h2>
+      <p>El mole no es solo una receta: es memoria, ritual y celebración. Con más de 30 variedades reconocidas —desde el legendario mole poblano hasta el complejo mole negro oaxaqueño— cada región de México guarda su propia versión, transmitida de generación en generación.</p>
+    </section>
+
+    <section id="rutas">
+      <h2 style="text-align: center; color: var(--color-primary); margin-bottom: 2rem;">Rutas Gastronómicas</h2>
+      <div class="rutas-grid">
+        <!-- Puebla -->
+        <div class="ruta-card">
+          <img src="https://i.imgur.com/vovVlHX.jpg" alt="Mole Poblano">
+          <div class="ruta-content">
+            <h3>Puebla: Cuna del Mole Poblano</h3>
+            <p>Recorre conventos, mercados y cocinas familiares donde se prepara el mole más famoso de México.</p>
+          </div>
+        </div>
+
+        <!-- Oaxaca -->
+        <div class="ruta-card">
+          <img src="https://i.imgur.com/cMUijIw.jpg" alt="Mole Oaxaqueño">
+          <div class="ruta-content">
+            <h3>Oaxaca: Los Siete Moles</h3>
+            <p>Explora los valles centrales y aprende sobre el mole negro, coloradito, amarillo, verde, chichilo, mancha manteles y rojo.</p>
+          </div>
+        </div>
+
+        <!-- Tlaxcala -->
+        <div class="ruta-card">
+          <img src="https://i.imgur.com/bIZqKF5.jpg" alt="Mole de Caderas">
+          <div class="ruta-content">
+            <h3>Tlaxcala: Mole de Caderas</h3>
+            <p>Una ruta única hacia el mole de caderas, preparado con huesos de chivo y especias locales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer id="contacto">
+    <p>© 2025 Rutas del Mole — Celebrando la gastronomía mexicana con respeto y pasión.</p>
+    <p>contacto@rutasdelmole.mx | +52 (222) 123 4567</p>
+  </footer>
+
+</body>
+</html>
